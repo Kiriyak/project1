@@ -1,0 +1,96 @@
+﻿<Window
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication1.bureau"
+        Title="bureau" Height="1080" Width="1920" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None">
+	<Window.Background>
+		<ImageBrush ImageSource="pack://siteoforigin:,,,/old_paper.jpg"/>
+	</Window.Background>
+    <Grid>
+    	<Label Content="БЮРО НАХОДОК" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="64"/>
+    	<Label Content="УТЕРЯНО" FontSize="48" FontFamily="Tahoma" Margin="380,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    	<Label Content="НАЙДЕНО" FontSize="48" FontFamily="Tahoma" Margin="0,90,380,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+    	<ScrollViewer x:Name="uteryanoscroll" Margin="4,180,965,120" Background="#FFFFF6D9" Visibility="Hidden">
+    		<Grid Height="780" Width="955" HorizontalAlignment="Left">
+    			<TextBlock TextWrapping="Wrap" FontSize="29.333" Margin="0,0,10,562" Width="950" Height="220"><Run Language="ru-ru" Text="Утеряно "/><Run FontFamily="Tahoma" Language="ru-ru" Text="аолволтмтл"/></TextBlock>
+    			<Label Content="Подробнее&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="740,244,0,0" FontFamily="Tahoma" FontSize="32" Width="175" Height="60"/>
+    			<TextBlock TextWrapping="Wrap" FontSize="29.333" Margin="0,324,5,236" Width="950" Height="220"><Run Language="ru-ru" Text="Утеряно "/><Run FontFamily="Tahoma" Language="ru-ru" Text="аолволтмтл"/></TextBlock>
+    			<Label Content="Подробнее&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="740,568,0,0" FontFamily="Tahoma" FontSize="32" Width="175" Height="60"/>
+    			<TextBlock TextWrapping="Wrap" FontSize="29.333" Margin="0,654,5,-94" Width="950" Height="220"><Run Language="ru-ru" Text="Утеряно "/><Run FontFamily="Tahoma" Language="ru-ru" Text="аолволтмтл"/></TextBlock>
+    			<Label Content="Подробнее&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="740,898,0,-178" FontFamily="Tahoma" FontSize="32" Width="175" Height="60"/>
+    		</Grid>
+    	</ScrollViewer>
+    	<ScrollViewer x:Name="naidenoscroll" Margin="965,180,4,120" Background="#FFFFF6D9" Visibility="Hidden">
+    		<Grid Height="780" Width="955" HorizontalAlignment="Right" Margin="0">
+    			<TextBlock TextWrapping="Wrap" Width="950" Height="220" Margin="24,0,-19,560" FontSize="29.333" FontFamily="Tahoma"><Run Language="ru-ru" Text="1. Найдено синяя шапка ........."/></TextBlock>
+    			<Label Content="Подробнее&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="758,244,0,0" FontFamily="Tahoma" FontSize="32" Width="175" Height="60"/>
+    			<TextBlock TextWrapping="Wrap" Width="950" Height="220" Margin="24,324,-19,236" FontSize="29.333" FontFamily="Tahoma"><Run Language="ru-ru" Text="2. Найдено синяя шапка ........."/></TextBlock>
+    			<Label Content="Подробнее&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="758,568,0,0" FontFamily="Tahoma" FontSize="32" Width="175" Height="60"/>
+    			<TextBlock TextWrapping="Wrap" Width="950" Height="220" Margin="24,654,-19,-127" FontSize="29.333" FontFamily="Tahoma"><Run Language="ru-ru" Text="3. Найдено синяя шапка ........."/></TextBlock>
+    		</Grid>
+    	</ScrollViewer>
+    	<Label Content="ГЛАВНАЯ" FontSize="32" FontFamily="Tahoma" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="886.836,0,886.836,33"/>
+    	<Button Content="Я потерял!" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Tahoma" FontSize="32" Margin="200,0,0,10" Visibility="Hidden"/>
+    	<Button Content="Я нашел!" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Tahoma" FontSize="32" Margin="0,0,200,10" Visibility="Hidden"/>
+    	<ScrollViewer x:Name="moreuteryanoscroll" Margin="4,180,0,120" Width="951" HorizontalAlignment="Left" Background="#FFFFF6D9" Visibility="Hidden">
+    		<TextBox TextWrapping="Wrap" Background="#FFFFF6D9" Text=" 1. Утеряна флешка красного цвета, с памятью 4 Гб, предположительное место потери - 365 кабинет. Прошу вернуть за вознаграждение!)&#xd;&#xa;&#xd;&#xa;Утеряно: 11.10.2012&#xd;&#xa;Контакты: с/т 87777777777&#xd;&#xa;email: stasson1103@mail.ru&#xd;&#xa;&#xd;&#xa;Опубликовано: 11.10.2012 10:21     &#x9; &#xd;&#xa;" FontFamily="Tahoma" FontSize="32" Width="955" Height="700" VerticalAlignment="Top" BorderBrush="#FFFFF6D9"/>
+    	</ScrollViewer>
+    	<Label Content="НАЗАД" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="400,0,0,130" FontSize="29.333" FontFamily="Tahoma" Visibility="Hidden"/>
+    	<ScrollViewer x:Name="morenaidenoscroll" Margin="712,180,4,120" Width="951" HorizontalAlignment="Right" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9" Visibility="Hidden">
+    		<TextBox TextWrapping="Wrap" Text="1. Найдена шапка черного цвета на 3 этаже Абылайхана&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;Найдено 11.04.2012&#xd;&#xa;Контакты: 7473647343&#xd;&#xa;&#xa;&#xa;Опубликовано: 11.10.2012 10:21&#x9;&#x9;&#xa;&#xa;" FontSize="32" FontFamily="Tahoma" Width="945" Background="#FFFFF6D9" Height="700" VerticalAlignment="Top" BorderBrush="#FFFFF6D9"/>
+    	</ScrollViewer>
+    	<Label Content="НАЗАД" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,400,130" FontSize="29.333" FontFamily="Tahoma" Visibility="Hidden"/>
+    	<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="780" Width="955" Margin="4,180,0,120">
+    		<Grid HorizontalAlignment="Left" Height="780" Width="955" Margin="4,0,0,0" VerticalAlignment="Top">
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Margin="229,4,0,0" FontSize="32" FontFamily="Tahoma" Height="50" Width="200" Background="#FFFFF6D9"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Margin="451.5,4,0,0" FontSize="32" FontFamily="Tahoma" Height="50" Width="200" Background="#FFFFF6D9"/>
+    			<Label Content="Представтесь:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="32" FontFamily="Tahoma" Margin="4,4,0,0"/>
+    			<Label Content="Что Вы потеряли?" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="32" FontFamily="Tahoma" Margin="4,60,0,0"/>
+    			<TextBox TextWrapping="Wrap" Height="298" Margin="4,118,-4,364" HorizontalScrollBarVisibility="Auto" UndoLimit="99" Width="945" HorizontalAlignment="Left" FontFamily="Tahoma" FontSize="29.333" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<Label Content="Когда Вы потеряли?" HorizontalAlignment="Left" FontSize="32" FontFamily="Tahoma" Margin="4,0,0,295" VerticalAlignment="Bottom"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="День" Margin="339,0,0,295" FontSize="32" FontFamily="Tahoma" Width="150.769" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9">
+    				<TextBox.BorderBrush>
+    					<LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+    						<GradientStop Color="#FFABADB3" Offset="0.05"/>
+    						<GradientStop Color="#FFE2E3EA" Offset="0.07"/>
+    						<GradientStop Color="#FFFFF6D9" Offset="1"/>
+    					</LinearGradientBrush>
+    				</TextBox.BorderBrush>
+    			</TextBox>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Месяц" Margin="506.731,0,0,295" FontSize="32" FontFamily="Tahoma" Width="150.769" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<Label Content="Контакты:" HorizontalAlignment="Left" FontSize="32" FontFamily="Tahoma" Margin="4,0,0,230" VerticalAlignment="Bottom"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Телефон" Margin="175,0,0,230" FontSize="32" FontFamily="Tahoma" Width="237.87" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" Margin="439.63,0,0,230" FontSize="32" FontFamily="Tahoma" Width="237.87" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<Label Content="*Примечание: Уважаемый пользователь, данная заявка пройдет &#xD;&#xA;проверку для утверждения во избежание спама. Предупреждаем,&#xD;&#xA; что заявка будет отображаться в течение 1 недели со дня&#xD;&#xA; публикации!&#xA;" HorizontalAlignment="Left" FontSize="29.333" FontFamily="Tahoma" Margin="4,0,0,70" VerticalAlignment="Bottom" Width="945" Height="151"/>
+    			<Label Content="ОТПРАВИТЬ" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="32" FontFamily="Tahoma" Margin="100,0,0,0"/>
+    			<Label Content="НАЗАД" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="32" FontFamily="Tahoma" Margin="0,0,100,0"/>
+    		</Grid>
+    	</Border>
+    	<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="780" Width="955" Margin="4,180,4,120">
+    		<Grid HorizontalAlignment="Left" Height="780" Width="955" Margin="4,0,0,0" VerticalAlignment="Top">
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Margin="229,4,0,0" FontSize="32" FontFamily="Tahoma" Height="50" Width="200" Background="#FFFFF6D9"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Margin="451.5,4,0,0" FontSize="32" FontFamily="Tahoma" Height="50" Width="200" Background="#FFFFF6D9"/>
+    			<Label Content="Представтесь:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="32" FontFamily="Tahoma" Margin="4,4,0,0"/>
+    			<Label Content="Что Вы нашли?" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="32" FontFamily="Tahoma" Margin="4,60,0,0"/>
+    			<TextBox TextWrapping="Wrap" Height="298" Margin="4,118,-4,364" HorizontalScrollBarVisibility="Auto" UndoLimit="99" Width="945" HorizontalAlignment="Left" FontFamily="Tahoma" FontSize="29.333" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<Label Content="Когда Вы нашли?" HorizontalAlignment="Left" FontSize="32" FontFamily="Tahoma" Margin="4,0,0,295" VerticalAlignment="Bottom"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="День" Margin="339,0,0,295" FontSize="32" FontFamily="Tahoma" Width="150.769" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9">
+    				<TextBox.BorderBrush>
+    					<LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+    						<GradientStop Color="#FFABADB3" Offset="0.05"/>
+    						<GradientStop Color="#FFE2E3EA" Offset="0.07"/>
+    						<GradientStop Color="#FFFFF6D9" Offset="1"/>
+    					</LinearGradientBrush>
+    				</TextBox.BorderBrush>
+    			</TextBox>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Месяц" Margin="506.731,0,0,295" FontSize="32" FontFamily="Tahoma" Width="150.769" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<Label Content="Контакты:" HorizontalAlignment="Left" FontSize="32" FontFamily="Tahoma" Margin="4,0,0,230" VerticalAlignment="Bottom"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Телефон" Margin="175,0,0,230" FontSize="32" FontFamily="Tahoma" Width="237.87" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" Margin="439.63,0,0,230" FontSize="32" FontFamily="Tahoma" Width="237.87" Height="50" VerticalAlignment="Bottom" Background="#FFFFF6D9" BorderBrush="#FFFFF6D9"/>
+    			<Label Content="*Примечание: Уважаемый пользователь, данная заявка пройдет &#xA;проверку для утверждения во избежание спама. Предупреждаем,&#xA; что заявка будет отображаться в течение 1 недели со дня&#xA; публикации!&#xA;" HorizontalAlignment="Left" FontSize="29.333" FontFamily="Tahoma" Margin="4,0,0,70" VerticalAlignment="Bottom" Width="945" Height="151"/>
+    			<Label Content="ОТПРАВИТЬ" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="32" FontFamily="Tahoma" Margin="100,0,0,0"/>
+    			<Label Content="НАЗАД" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="32" FontFamily="Tahoma" Margin="0,0,100,0"/>
+    		</Grid>
+    	</Border>
+    </Grid>
+</Window>
