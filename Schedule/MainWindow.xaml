@@ -9,7 +9,7 @@
     			<ImageBrush ImageSource="pack://siteoforigin:,,,/old_paper.jpg"/>
     		</Border.Background>
     	</Border>
-    	<Border x:Name="BorderPicture" BorderBrush="Black" BorderThickness="1" Margin="1,116.5,277,1" Opacity="0.8" Visibility="Hidden">
+    	<Border x:Name="BorderPicture" BorderBrush="Black" BorderThickness="1" Margin="1,116.5,277,1" Opacity="0.8" Visibility="Visible">
     		<Border.Background>
     			<ImageBrush ImageSource="pack://siteoforigin:,,,/Jlid-k5nvVQ-2.jpg"/>
     		</Border.Background>
@@ -19,22 +19,29 @@
     	<Label x:Name="Main" Content="ГЛАВНАЯ" Margin="0,0,62.667,8" FontSize="29.333" FontFamily="Tahoma" Height="47" Width="141" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
     	<TextBox x:Name="ID" HorizontalAlignment="Right" Height="35" Margin="0,175,8,0" TextWrapping="Wrap" Text="Введите ID" VerticalAlignment="Top" Width="250" FontFamily="Tahoma" FontSize="24" ScrollViewer.CanContentScroll="True" Background="#FFFFF6D9"/>
     	<TextBox x:Name="Password" HorizontalAlignment="Right" Height="35" Margin="0,220,8,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="250" FontFamily="Tahoma" FontSize="24" Background="#FFFFF6D9"/>
-    	<Button x:Name="OK1" Content="OK" HorizontalAlignment="Right" Margin="0,265,8,0" Width="85" Height="35" VerticalAlignment="Top" FontSize="21.333"/>
+    	<Button x:Name="OK1" Content="OK" HorizontalAlignment="Right" Margin="0,265,8,0" Width="85" Height="35" VerticalAlignment="Top" FontSize="21.333" Click="ShowScheduleOKButton_Click" />
     	<TextBox x:Name="Name" HorizontalAlignment="Right" Height="35" Margin="0,410,8,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="250" FontFamily="Tahoma" FontSize="24" Background="#FFFFF6D9"/>
     	<TextBox x:Name="Surname" HorizontalAlignment="Right" Margin="0,455,8,0" TextWrapping="Wrap" Text="Фамилия" Width="250" FontFamily="Tahoma" FontSize="24" Height="35" VerticalAlignment="Top" Background="#FFFFF6D9"/>
-    	<Button x:Name="OK2" Content="OK" HorizontalAlignment="Right" Margin="0,500,8,0" Width="85" FontSize="21.333" VerticalAlignment="Top"/>
-    	<Label x:Name="TeacherList" Content="СПИСОК УЧИТЕЛЕЙ" Height="51" Margin="0,0,2,467.627" Width="275" FontFamily="Tahoma" FontSize="29.333" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    	<Button x:Name="OK2" Content="OK" HorizontalAlignment="Right" Margin="0,500,8,0" Width="85" FontSize="21.333" VerticalAlignment="Top" Click="ShowTeacherScheduleOKButton_Click" />
+    	<Label x:Name="TeacherList" Content="СПИСОК УЧИТЕЛЕЙ" Height="51" Margin="0,0,2,467.627" Width="275" FontFamily="Tahoma" FontSize="29.333" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="ShowTeacherList_label" />
     	<TextBlock x:Name="TeacherSchedule" HorizontalAlignment="Right" Height="85" Margin="0,327,-35,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" FontFamily="Tahoma" FontSize="29.333" TextAlignment="Center" Text="РАСПИСАНИЕ ПРЕПОДАВАТЕЛЯ"/>
-    	<Border x:Name="ScheduleBorder" BorderBrush="White" BorderThickness="1" Margin="1,116.5,277,1" Background="#FFFFF6D9">
+        <Border x:Name="ScheduleBorder" BorderBrush="White" BorderThickness="1" Margin="1,116.5,277,1" Background="#FFFFF6D9" Opacity="0">
     		<Grid x:Name="Grid1">
     			<Label x:Name="HelloLabel" Content="ЗДРАВСТВУЙТЕ, ФИО!" Padding="5" Margin="715.491,10,0,0" HorizontalContentAlignment="Center" FontSize="29.333" FontFamily="Tahoma" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-    		</Grid>
+                <Label x:Name="Back1" Content="НАЗАД" VerticalAlignment="Bottom" FontSize="29.333" Background="#00000000" Margin="785,0,0,0" HorizontalAlignment="Left" MouseLeftButtonUp="ScheduleNAZAD_label"/>
+            </Grid>
     	</Border>
-    	<Border x:Name="TeacherListBorder" BorderBrush="Black" BorderThickness="1" Margin="1,116.5,277,1" Background="#FFFFF6D9" Visibility="Hidden">
-    		<Grid x:Name="Grid2">
-    			<Label x:Name="Back" Content="НАЗАД" VerticalAlignment="Bottom" FontSize="29.333" Background="#00000000" Margin="785,0,0,0" HorizontalAlignment="Left"/>
+        <Border x:Name="TeacherScheduleBorder" BorderBrush="White" BorderThickness="1" Margin="1,116.5,277,1" Background="#FFFFF6D9" Opacity="0">
+            <Grid x:Name="Grid3">
+                <Label x:Name="HelloTeacherLabel" Content="РАСПИСАНИЕ ФИО" Padding="5" Margin="715.491,10,0,0" HorizontalContentAlignment="Center" FontSize="29.333" FontFamily="Tahoma" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Label x:Name="Back2" Content="НАЗАД" VerticalAlignment="Bottom" FontSize="29.333" Background="#00000000" Margin="785,0,0,0" HorizontalAlignment="Left" MouseLeftButtonUp="TeacherScheduleNAZAD_label"/>
+            </Grid>
+        </Border>
+        <Border x:Name="TeacherListBorder" BorderBrush="Black" BorderThickness="1" Margin="1,116.5,277,1" Background="#FFFFF6D9" Visibility="Visible" Opacity="0">
+    		<Grid x:Name="Grid2" Visibility="Visible">
+    			<Label x:Name="Back" Content="НАЗАД" VerticalAlignment="Bottom" FontSize="29.333" Background="#00000000" Margin="785,0,0,0" HorizontalAlignment="Left" MouseLeftButtonUp="TeacherListNAZAD_label" />
     			<Label x:Name="ListLabel" Content="СПИСОК ПРЕПОДАВАТЕЛЕЙ" Padding="5" HorizontalContentAlignment="Center" FontSize="29.333" FontFamily="Tahoma" Height="55.999" VerticalAlignment="Top" Margin="667.489,10,0,0" HorizontalAlignment="Left"/>
-    			<DataGrid x:Name="List" Margin="28,67.999,29.788,61.017" BorderBrush="Black" HorizontalScrollBarVisibility="Disabled" FontFamily="Tahoma" CanUserResizeRows="False" Padding="0,0,2,0" Background="#FFFFF6D9">
+    			<DataGrid x:Name="List" Margin="28,67.999,29.788,61.017" BorderBrush="Black" HorizontalScrollBarVisibility="Disabled" FontFamily="Tahoma" CanUserResizeRows="False" Padding="0,0,2,0" Background="#FFFFF6D9" Visibility="Visible">
     				<DataGrid.Columns>
     					<DataGridTextColumn SortMemberPath="1" Header="ФАКУЛЬТЕТ" FontSize="24" FontFamily="Tahoma" Width="150"/>
     					<DataGridTextColumn Header="КАФЕДРА" Width="200" FontSize="24" FontFamily="Tahoma"/>

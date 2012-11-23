@@ -24,5 +24,41 @@ namespace WpfApplication1
             InitializeComponent();
 			
         }
+
+        private void ShowScheduleOKButton_Click(object sender, RoutedEventArgs e)
+        {
+            ScheduleBorder.Opacity = 1;
+            ScheduleBorder.Visibility = Visibility.Visible;
+        }
+
+        private void ScheduleNAZAD_label(object sender, MouseButtonEventArgs e)
+        {
+            ScheduleBorder.Opacity = 0;
+            ScheduleBorder.Visibility = Visibility.Hidden;
+        }
+
+        private void ShowTeacherScheduleOKButton_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherScheduleBorder.Opacity = 1;
+            TeacherScheduleBorder.Visibility = Visibility.Visible;
+        }
+
+        private void TeacherScheduleNAZAD_label(object sender, MouseButtonEventArgs e)
+        {
+            TeacherScheduleBorder.Opacity = 0;
+            TeacherScheduleBorder.Visibility = Visibility.Hidden;
+        }
+        
+        private void ShowTeacherList_label(object sender, MouseButtonEventArgs e)
+        {
+            TeacherListBorder.Opacity = 1;
+            TeacherListBorder.Visibility = Visibility.Visible;
+        }
+
+        private void TeacherListNAZAD_label(object sender, MouseButtonEventArgs e)
+        {
+            TeacherListBorder.Opacity = 0;
+            TeacherListBorder.Visibility = Visibility.Hidden;
+        }
     }
 }
